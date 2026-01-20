@@ -1,6 +1,6 @@
 # Pancreatic Tumour Segmentation via Hybrid Trans-Att-UNet++
 
-![Pancreas Segmentation Hero](pancreas_segmentation_hero_1768895128610.png)
+![Pancreas Segmentation Hero](pancreas_segmentation_hero.png)
 
 ## 📌 Overview
 This repository contains a state-of-the-art implementation for **Pancreatic Tumour Segmentation** using a novel hybrid architecture, **Trans-Att-UNet++**. This model integrates the power of **Transformers**, **Attention Gating**, and **Nested U-Net (U-Net++)** structures to achieve highly precise segmentation on medical imaging data (CT slices).
