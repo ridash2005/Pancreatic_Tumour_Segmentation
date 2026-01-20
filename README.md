@@ -5,7 +5,7 @@
 ## 📌 Overview
 This repository contains a state-of-the-art implementation for **Pancreatic Tumour Segmentation** using a novel hybrid architecture, **Trans-Att-UNet++**. This model integrates the power of **Transformers**, **Attention Gating**, and **Nested U-Net (U-Net++)** structures to achieve highly precise segmentation on medical imaging data (CT slices).
 
-Specifically designed for the **Medical Segmentation Decathlon (MSD) Pancreas Dataset**, this pipeline handles DICOM slices, performs advanced augmentations, and achieves superior localization of both the pancreas and associated tumours.
+Specifically designed for the **Panther Challange Dataset**, this pipeline handles DICOM slices, performs advanced augmentations, and achieves superior localization of both the pancreas and associated tumours.
 
 ---
 
