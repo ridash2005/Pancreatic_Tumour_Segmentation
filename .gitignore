@@ -16,3 +16,4 @@ local_test_reports/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+*.txt

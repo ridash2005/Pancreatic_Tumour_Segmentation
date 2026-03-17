@@ -4,57 +4,40 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 
-This repository implements **TransAttUNet++**, a state-of-the-art hybrid architecture for medical image segmentation. It combines the local feature extraction of **CNNs**, the global context modeling of **Transformers**, and the spatial refinement of **Attention Gating**, all within a **Nested U-Net (UNet++)** framework.
+This repository focuses on **TransAttUNet++**, a novel hybrid architecture for high-precision pancreatic tumour segmentation. The project explores the integration of **CNNs** for local features, **Transformers** for global context, and **Attention Gating** in a **Nested U-Net (UNet++)** topology.
 
 ![Segmentation Hero](pancreas_segmentation_hero.png)
 
-## 🚀 Key Features
-- **Hybrid Topology**: Integrates Transformer blocks in the bottleneck for long-range dependency modeling.
-- **TransAttUNet++ 3D**: Full volumetric support for NIfTI datasets with Patient-Aware 5-Fold Cross-Validation.
-- **nnU-Net Integration**: Automated scripts to prepare and run official nnU-Net v2 pipelines.
-- **Awareness Compliance**: Guaranteed patient-level data splitting to prevent data leakage and ensure publication validity.
-
----
+## 🌟 Original Contribution: TransAttUNet++
+The core of this work is a specialized hybrid model designed for volumetric medical data:
+- **Nested Skip Connections**: Improved gradient flow and feature reuse via UNet++ backbone.
+- **Transformer Bottleneck**: Long-range dependency modeling to capture global tumour morphology.
+- **Dynamic Attention**: Spatially-aware attention gates to suppress non-relevant background tissue.
 
 ## 📂 Repository Structure
-```
+```bash
 Pancreatic_Tumour_Segmentation/
 ├── src/
-│   ├── models/       # TransAttUNet++ 2D & 3D Architectures
+│   ├── models/       # TransAttUNet++ Core Architectures (2D/3D)
 │   ├── data/         # Patient-Aware Dataloaders & Volume Processing
-│   └── utils/        # Dice Loss, Metrics & Training Logic
-├── scripts/          # nnU-Net Setup & Utility Tools
-├── notebooks/        # Jupyter/Colab Training Notebooks
-├── main.py           # Experiment Entry Point
-└── requirements.txt  # Dependencies
+│   └── utils/        # Training Logic, Dice Loss & Specialized Metrics
+├── experiments/      # Development & Evaluation Notebooks
+├── baselines/        # Comparative Baselines (e.g., nnU-Net v2)
+│   └── nnUNet/       # Managed scripts and configs for nnU-Net
+├── requirements.txt  # Project Dependencies
+└── README.md         # Documentation
 ```
+
+## 🛠️ Getting Started
+1. **Installation**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Train TransAttUNet++**:
+   Navigate to `experiments/` to run the primary training notebooks or explore `src/` for custom implementation.
+
+## 📊 Baselines & Evaluation
+To ensure rigorous performance verification, we compare our architecture against state-of-the-art baselines.
+- **nnU-Net v2**: Automated baseline scripts are located in `baselines/nnUNet/`.
 
 ---
-
-## 🛠️ Usage
-### 1. Requirements
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Training (3D NIfTI with 5-Fold CV)
-To run the full Patient-Aware 5-Fold Cross-Validation:
-```bash
-python transattunet_3d.py
-```
-
-### 3. Training (2D Slices)
-To train on individual DICOM slices:
-```bash
-python architecture.py
-```
-
-### 4. nnU-Net Pipeline
-To set up and run the official nnU-Net v2 baseline:
-```bash
-python nnUNet.py
-```
-
----
-
