@@ -1,0 +1,18 @@
+# Data
+Dataset/
+nnUNet_raw/
+nnUNet_raw.zip
+nnUNet_preprocessed/
+nnUNet_results/
+temp_zip_check/
+
+# Reports
+local_test_reports/
+
+# Excel files
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
